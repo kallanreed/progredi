@@ -7,7 +7,7 @@
     <ProjectGuid>{9A39C5BE-3E43-4EDB-9D79-0D461CD2350D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Progredi.Core</RootNamespace>
+    <RootNamespace>Progredi</RootNamespace>
     <AssemblyName>Progredi.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -51,9 +51,7 @@
     <Compile Include="Tag.cs" />
     <Compile Include="Teacher.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
