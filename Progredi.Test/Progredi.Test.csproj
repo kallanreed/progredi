@@ -37,16 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.6.0.0.0.Fakes">
-      <HintPath>FakesAssemblies\EntityFramework.6.0.0.0.Fakes.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Progredi.Data.Fakes">
       <HintPath>FakesAssemblies\Progredi.Data.Fakes.dll</HintPath>
@@ -67,8 +57,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Data\EF\RepositoryCrudTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Local\LocalTagServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Progredi.Core\Progredi.Core.csproj">
@@ -79,14 +69,19 @@
       <Project>{e2b81da7-8297-4bf5-8496-9f2a36dd6697}</Project>
       <Name>Progredi.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Progredi.Service\Progredi.Service.csproj">
+      <Project>{c09e1730-d7bc-4a2c-a759-3125908beada}</Project>
+      <Name>Progredi.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Fakes Include="Fakes\Progredi.Data.fakes" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Fakes Include="Fakes\EntityFramework.fakes" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\EF\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

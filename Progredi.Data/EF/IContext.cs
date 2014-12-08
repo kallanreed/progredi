@@ -10,6 +10,8 @@ namespace Progredi.Data.EF
 {
     public interface IContext<T> : IDisposable where T : class
     {
+        DbContext DbContext { get; }
+
         IDbSet<T> DbSet { get; }
     }
 }

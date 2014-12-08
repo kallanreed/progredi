@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Progredi.Data.EF
 {
     using Interfaces;
 
-    public class Repository<T, TKey> : IRepository<T> where T: class
+    public class Repository<T> : IRepository<T> where T: class
     {
         private IContext<T> context;
 
@@ -32,22 +33,24 @@ namespace Progredi.Data.EF
 
         public T Add(T entity)
         {
-            throw new NotImplementedException();
+            return this.context.DbSet.Add(entity);
         }
 
         public T Update(T entity)
         {
-            throw new NotImplementedException();
+            var updated = this.context.DbSet.Attach(entity);
+            this.context.DbContext.Entry(entity).State = EntityState.Modified;
+            return updated;
         }
 
         public T Remove(T entity)
         {
-            throw new NotImplementedException();
+            return this.context.DbSet.Remove(entity);
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            this.context.DbContext.SaveChanges();
         }
     }
 }

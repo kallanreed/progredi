@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progredi.Desktop", "Progred
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progredi.Service", "Progredi.Service\Progredi.Service.csproj", "{C09E1730-D7BC-4A2C-A759-3125908BEADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrediTestConsole", "ProgrediTestConsole\ProgrediTestConsole.csproj", "{9B421F71-B2DF-484F-94C4-F24BA0D3FB86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Executables", "Executables", "{F8315D4A-68E5-4957-90AB-43BD41783517}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,8 +50,16 @@ Global
 		{C09E1730-D7BC-4A2C-A759-3125908BEADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09E1730-D7BC-4A2C-A759-3125908BEADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09E1730-D7BC-4A2C-A759-3125908BEADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B421F71-B2DF-484F-94C4-F24BA0D3FB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B421F71-B2DF-484F-94C4-F24BA0D3FB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B421F71-B2DF-484F-94C4-F24BA0D3FB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B421F71-B2DF-484F-94C4-F24BA0D3FB86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3B5E52C-13DE-43D8-8372-5F0CE3E86A35} = {F8315D4A-68E5-4957-90AB-43BD41783517}
+		{9B421F71-B2DF-484F-94C4-F24BA0D3FB86} = {F8315D4A-68E5-4957-90AB-43BD41783517}
 	EndGlobalSection
 EndGlobal
